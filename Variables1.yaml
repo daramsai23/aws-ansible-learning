@@ -1,0 +1,7 @@
+name: Learn Variables 
+  hosts: Catalouge
+
+tasks:
+    - name: Install Nginx
+      ansible.builtin.debug:
+       msg: "Hello welocme to learn variables"

@@ -1,0 +1,5 @@
+*.pem
+*.key
+.env
+inventory.ini
+.DS_Store

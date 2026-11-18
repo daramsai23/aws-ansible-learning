@@ -1,2 +1,14 @@
-- name: variable practice
-  hosts: Catalouge
+---
+- name: First play on Master
+  hosts: local
+  tasks:
+    - name: Print first message
+      ansible.builtin.debug:
+        msg: "hello print 1"
+
+- name: Second play on Master
+  hosts: local
+  tasks:
+    - name: Print second message
+      ansible.builtin.debug:
+        msg: "hello print A"

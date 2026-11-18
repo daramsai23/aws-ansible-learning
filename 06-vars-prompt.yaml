@@ -1,0 +1,15 @@
+---
+- name: Practice variables from a file
+  hosts: local
+
+  vars_files:
+    - 05-course-variables.yaml
+
+  tasks:
+    - name: Print application name
+      ansible.builtin.debug:
+        msg: "Application name is {{ app_name }}"
+
+    - name: Print application port
+      ansible.builtin.debug:
+        msg: "Application port is {{ app_port }}"

@@ -1,0 +1,17 @@
+
+---
+- name: Practice Ansible variables
+  hosts: local
+  vars:
+    app_name: "nginx"
+    app1_name: "Tomcat"
+
+  tasks:
+    - name: Print application name
+      ansible.builtin.debug:
+        msg: "The application is {{ app_name }}"
+        
+    - name: Print application1 name
+      ansible.builtin.debug:
+        msg: "The application is {{ app1_name }}"
+

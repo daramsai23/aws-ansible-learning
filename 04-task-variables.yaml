@@ -1,0 +1,22 @@
+
+---
+- name: Practice play-level and task-level variables
+  hosts: local
+
+  vars:
+    app_name: "nginx"
+
+  tasks:
+    - name: Print play-level variable
+      ansible.builtin.debug:
+        msg: "Play-level application is {{ app_name }}"
+
+    - name: Print task-level variable
+      vars:
+        app_name: "Tomcat"
+      ansible.builtin.debug:
+        msg: "Task-level application is {{ app_name }}"
+
+    - name: Print play-level variable again
+      ansible.builtin.debug:
+        msg: "Application is {{ app_name }}"

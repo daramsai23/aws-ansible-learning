@@ -1,0 +1,11 @@
+---
+- name: Practice inventory variables
+  hosts: local
+  tasks:
+    - name: Display application name
+      ansible.builtin.debug:
+        msg: "Application is {{ app_name }}"
+
+    - name: Display application port
+      ansible.builtin.debug:
+        msg: "Application port is {{ app_port }}"

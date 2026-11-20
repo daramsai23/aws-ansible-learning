@@ -1,0 +1,16 @@
+
+- name: Practice prompt variables
+  hosts: local
+
+  vars_prompt:
+    - name: app_name
+      prompt: "Enter application name"
+      private: false
+    - name: app_name
+      prompt: "Enter application password"
+      private: true
+
+  tasks:
+    - name: Display application name
+      ansible.builtin.debug:
+        msg: "Your application is {{ app_name }}"
